@@ -1,3 +1,8 @@
+@media (max-width: 468px) {
+	html {
+		font-size: 42.5%;
+	}
+}
 body {
     font-size: 16px;
     margin: 0px;
@@ -243,13 +248,4 @@ footer {
     height: 5%;
     grid-column: 1/5;
     padding-top: 5%;
-}
-@media only screen and (max-width : 550px) {
-    body {
-        font-size: 10px;
-        margin: 0;
-        background-color: #29a7a7;
-        grid-template-columns: 1fr;
-        border: #103e7a solid 2px;
-    }
 }
