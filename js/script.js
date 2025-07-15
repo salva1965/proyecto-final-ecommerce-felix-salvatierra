@@ -1,13 +1,21 @@
 // Asigna evento clic a todos los botones con la clase "comprar" del HTML
+let Contador = 0;
 let botonesComprar = document.getElementsByClassName('comprar');
+const ContadorElemento = document.getElementById("contador");
+function incrementar() {
+    Contador++;
+    ContadorElemento.textContent = Contador;
+}
+
    for (let i = 0; i < botonesComprar.length; i++) {
      botonesComprar[i].addEventListener('click', agregarProducto);
    }
-
 // Vacía carrito
 document.getElementById('vaciar-carrito').addEventListener('click', function() {
      localStorage.removeItem('carrito');
      cargarCarrito();
+     Contador = 0;
+     ContadorElemento.textContent = Contador;
 });
 
 // Agrega productos al carrito
