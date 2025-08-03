@@ -2,89 +2,82 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="./style/estilo.css"> <!-- Revisa tu ruta a la hoja de estilo -->
-  <title>Resumen de Compra</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./style/estilo.css"> <!-- Revisa tu ruta a la hoja de estilo -->
+    <title>Resumen de Compra</title>
 </head>
 
 <body>
-  <header>
-     <section>
-            <div class="contenedor_header">
-                <div class="logo">
-                    <img src="./img/logo 1.png" alt="logo" width="50%">
+    <header>
+       <div class="logo">
+            <img src="./img/logo 1.png" alt="logo" height="50px">
+        </div>
+        <div class="titulo">
+            <h1> Venta de sabanas y acolchados</h1>
+            <h2>Todo para tu cama o sommier</h2>
+        </div>
+        <nav>
+            <a href="./index.html" class="nav-">Inicio</a>
+            <a href="./productos.html" class="nav-">Productos</a>
+            <a href="./reseña.html" class="nav-">Reseña</a>
+            <a href="./contacto.html" class="nav-">Contacto</a>
+            <a href="" class="nav-">
+                <label for="btn-modal">
+                    <div class="carrito">
+                        <span><i class="fa-solid fa-cart-shopping"></i></span>
+                        <span id="contador">0</span>
+                    </div>
+                </label>
+            </a>
+        </nav>
+        <input type="checkbox" id="btn-modal">
+        <div class="contenedor_modal">
+            <div class="contenido_modal">
+                <h1>Tienda Online</h1>
+                <div id="carrito">
+                    <h2>Carrito de Compras</h2>
+                    <ul id="lista-carrito"></ul>
+                    <p>Total: $<span id="total-carrito">0</span></p>
+                    <ul id="lista-carrito"></ul>
                 </div>
-                <div class="titulo">
-                    <h1> Venta de sabanas y acolchados</h1>
-                    <h2>Todo para tu cama o sommier</h2>
-                </div>
-
-                <div class="menu">
-                    <nav>
-                        <a href="./index.html">Inicio</a>
-                        <a href="./productos.html">Productos</a>
-                        <a href="./reseña.html">Reseña</a>
-                        <a href="./contacto.html">Contacto</a>
-                        <a href="">
-                            <label for="btn-modal">
-                                <div class="carrito">
-                                    <span><i class="fa-solid fa-cart-shopping"></i></span>
-                                    <span id="contador">0</span>
-                                </div>
-                            </label>
-                        </a>
-                        <input type="checkbox" id="btn-modal">
-                        <div class="contenedor_modal">
-                            <div class="contenido_modal">
-                                <h1>Tienda Online</h1>
-                                <div id="carrito">
-                                    <h2>Carrito de Compras</h2>
-                                    <ul id="lista-carrito"></ul>
-                                    <p>Total: $<span id="total-carrito">0</span></p>
-                                    <ul id="lista-carrito"></ul>
-                                </div>
-                                <hr>
+                <hr>
 
 
-                                <button id="btnPagar">pagar</button>
-                                <button id="vaciar-carrito">Vaciar Carrito</button>
-                                <div class="btn-cerrar">
-                                    <label for="btn-modal">cerrar</label>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
+                <button id="btnPagar">pagar</button>
+                <button id="vaciar-carrito">Vaciar Carrito</button>
+                <div class="btn-cerrar">
+                    <label for="btn-modal">cerrar</label>
                 </div>
             </div>
+        </div>
+    </header> 
+
+    <main class="compra">
+        <h1>Resumen de la compra</h1>
+        <section>
+            <div id="detalle"></div>
         </section>
-  </header>
+    </main>
 
-  <main class="compra">
-    <h1>Resumen de la compra</h1>
-    <section>
-      <div id="detalle"></div>
-    </section>
-  </main>
+    <form id="formulario" action="https://formspree.io/f/myzpkaev" method="POST">
+        <textarea id="carritoData" name="carrito" style="display:none ;"></textarea>
+        <textarea id="totalCarrito" name="total" style="display:none ;"></textarea>
+        <br>
+        <hr>
+        <label>Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+        <label>Email:</label>
+        <input type="email" id="contactoEmail" name="Email" id="email" placeholder="email" required>
+        <label>Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono">
+        <br><br>
+        <button -type="submit" id="botonEnviar">Confirmar Compra</button>
+    </form>
 
-  <form id="formulario" action="https://formspree.io/f/myzpkaev" method="POST">
-    <textarea id="carritoData" name="carrito" style="display:none ;"></textarea>
-    <textarea id="totalCarrito" name="total" style="display:none ;"></textarea>
-    <br>
-    <hr>
-    <label>Nombre completo</label>
-    <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
-    <label>Email:</label>
-    <input type="email" id="contactoEmail" name="Email" id="email" placeholder="email" required>
-    <label>Teléfono:</label>
-    <input type="tel" id="telefono" name="telefono" placeholder="Teléfono">
-    <br><br>
-    <button -type="submit" id="botonEnviar">Confirmar Compra</button>
-  </form>
-
-  <footer>
-    <div class="icono1">
+    <footer>
+        <div class="icono1">
             <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
         </div>
         <div class="icono2">
@@ -96,10 +89,10 @@
         <div class="ulinea">
             <p>Desarrollado por :Felix Salvatierra - 2025 |<i class="fa-regular fa-envelope"></i> <a
                     href="mailto:salvadreams@gmail.com">Email :salvadreams@gmail.com</a></p>
-  </footer>
+    </footer>
 
-  <script src="./js/compra.js"></script>
-  <script src="./js/script.js"></script>
+    <script src="./js/compra.js"></script>
+    <script src="./js/script.js"></script>
 
 </body>
 
