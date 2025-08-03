@@ -7,52 +7,42 @@ body {
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: sticky;
     top: 0;
     background-color: #61dddd;
     border: 10px outset #298aa7;
-    margin: 0%;
-    height: 30%;
+    padding: 10px;
     z-index: 1;
     
 }
-
-.contenedor_header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    margin-right: 1%;
+nav {
+    padding-top: 4em;
+    padding-right: 1em;
 }
-
+.nav- {
+    display: inline-flex;
+    padding-right: 19px;
+}
+a {
+    text-decoration: none;
+    color: #103e7a;
+}
 .logo {
-    padding-bottom: 7%;
-    width: 20%;
-    height: 20%;
+    display: flex;
+    align-items: center;
 }
 
 .titulo {
-    width: auto;
-    height: auto;
-}
-.menu {
-    margin-left: 4%;
-    margin-bottom: 2%;
-    padding-top: 13%;
-    padding-left: 3%;
-    width: 45%;
-    height: auto;
-    font-size: 150%
-
-
+    font-size: .8em;
 }
 
-h1 {
-    font-size: 2rem;
-}
-h2 {
-    font-size: 1.5em;
+.uu {
+    display: inline;
+    justify-content: center;
+    align-items: safe;
 }
 
 h5 {
@@ -65,12 +55,7 @@ h4 {
     text-decoration: underline;
 }
 
-a {
-    color: #103e7a;
-    padding: 1%;
-    text-decoration: none;
-    font-family: "Cal Sans", sans-serif;
-}
+
 nav a:hover {
     color: red;
 }
@@ -88,10 +73,15 @@ button:hover {
     font-size: 1.1em;
         
 }
+#lista-carrito {
+    font-size: .7em;
+}
 #contador {
     background-color: red;
     position: absolute;
-    font-size: .7em;
+    width: 1.5em;
+    text-align: center;
+    font-size: .6em;
     color: #d1dfe9;
     border-radius: 50%;
 
@@ -115,8 +105,8 @@ button:hover {
     background-color: aliceblue;
     
 }
-.contenido_modal h2,h3{
-    font-size: 1em;
+.contenido_modal h2,p {
+    font-size: .9em;
 }
 .contenido_modal button{
     font-size: .6em;
@@ -312,4 +302,9 @@ footer {
         background-color: #90f2ff;
         grid-template-columns: 1fr;
     } 
+}
+@media only screen and (max-width: 450px) {
+    .contenido_modal {
+        width: 80%;
+    }
 }

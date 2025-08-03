@@ -1,21 +1,38 @@
 // Asigna evento clic a todos los botones con la clase "comprar" del HTML
-let Contador = 0;
+let contador = 0;
 let botonesComprar = document.getElementsByClassName('comprar');
 const ContadorElemento = document.getElementById("contador");
+document.addEventListener("DOMContentLoaded", () => {
+  let nombreGuardado = localStorage.getItem("cc");
+  if (nombreGuardado) {
+    
+    document.getElementById("contador").textContent=nombreGuardado;
+    contador=parseInt(nombreGuardado);
+    cargarCarrito();
+  }
+});
 function incrementar() {
-    Contador++;
-    ContadorElemento.textContent = Contador;
-}
+    
+   {contador=contador+1;
+    localStorage.setItem("cc",contador);
+    let tt =localStorage.getItem('cc');
+
+ document.getElementById("contador").textContent=tt;} 
+ 
+ 
+};
 
    for (let i = 0; i < botonesComprar.length; i++) {
      botonesComprar[i].addEventListener('click', agregarProducto);
    }
 // Vacía carrito
 document.getElementById('vaciar-carrito').addEventListener('click', function() {
-     localStorage.removeItem('carrito');
+     
+     contador = 0;
+     ContadorElemento.textContent = contador;
+     localStorage.removeItem("carrito");
+     localStorage.clear();
      cargarCarrito();
-     Contador = 0;
-     ContadorElemento.textContent = Contador;
 });
 
 // Agrega productos al carrito
@@ -50,7 +67,7 @@ function cargarCarrito() {
         total += parseFloat(producto.precio) || 0;
     }
     // Mostrar el total redondeado a 3 decimales
-    totalCarrito.textContent = total.toFixed(3);
+    totalCarrito.textContent = total.toFixed(2);
 }
 
 function pagar() {
@@ -66,11 +83,11 @@ function pagar() {
         total += parseFloat(carrito[i].precio) || 0;
     }
 
-    // Guardar datos en sessionStorage
-    sessionStorage.setItem('productos', JSON.stringify(carrito));
-    sessionStorage.setItem('total', total.toFixed(3));
+    
+    localStorage.setItem('productos', JSON.stringify(carrito));
+    localStorage.setItem('total', total.toFixed(2));
 
-    alert(`Total a pagar: $${total.toFixed(3)}`);
+    alert(`Total a pagar: $${total.toFixed(2)}`);
     window.location.href = "compra.html";
 }
 

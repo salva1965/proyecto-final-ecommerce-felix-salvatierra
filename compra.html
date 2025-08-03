@@ -14,7 +14,7 @@
      <section>
             <div class="contenedor_header">
                 <div class="logo">
-                    <img src="./img/logo.png" alt="logo" width="50%">
+                    <img src="./img/logo 1.png" alt="logo" width="50%">
                 </div>
                 <div class="titulo">
                     <h1> Venta de sabanas y acolchados</h1>
@@ -33,22 +33,22 @@
                                     <span><i class="fa-solid fa-cart-shopping"></i></span>
                                     <span id="contador">0</span>
                                 </div>
-                            </label></a>
-                        
+                            </label>
+                        </a>
                         <input type="checkbox" id="btn-modal">
                         <div class="contenedor_modal">
                             <div class="contenido_modal">
-                                <h2>Tienda Online</h2>
+                                <h1>Tienda Online</h1>
                                 <div id="carrito">
-                                    <h3>Carrito de Compras</h3>
+                                    <h2>Carrito de Compras</h2>
+                                    <ul id="lista-carrito"></ul>
                                     <p>Total: $<span id="total-carrito">0</span></p>
                                     <ul id="lista-carrito"></ul>
                                 </div>
                                 <hr>
 
 
-
-                                <button id="btnPagar"><a href="./compra.html">pagar</a></button>
+                                <button id="btnPagar">pagar</button>
                                 <button id="vaciar-carrito">Vaciar Carrito</button>
                                 <div class="btn-cerrar">
                                     <label for="btn-modal">cerrar</label>
@@ -68,7 +68,7 @@
     </section>
   </main>
 
-  <form id="formulario" action="https://formspree.io/f/xgvabdkj" method="POST">
+  <form id="formulario" action="https://formspree.io/f/myzpkaev" method="POST">
     <textarea id="carritoData" name="carrito" style="display:none ;"></textarea>
     <textarea id="totalCarrito" name="total" style="display:none ;"></textarea>
     <br>
@@ -76,7 +76,7 @@
     <label>Nombre completo</label>
     <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
     <label>Email:</label>
-    <input type="email" id="contactoEmail" name="email" placeholder="Correo electrónico" required>
+    <input type="email" id="contactoEmail" name="Email" id="email" placeholder="email" required>
     <label>Teléfono:</label>
     <input type="tel" id="telefono" name="telefono" placeholder="Teléfono">
     <br><br>
@@ -99,6 +99,7 @@
   </footer>
 
   <script src="./js/compra.js"></script>
+  <script src="./js/script.js"></script>
 
 </body>
 

@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Compra sabanas de alta calidad para tu cama o sommier al contado o en cuotas con importantes descuentos.">
+    <meta name="Keywords" content="sabanas,SÁBANA,TWIN,twin,queen,descuentos,modelo,comprar.">
+    <meta name="robots" content="INDEX,FOLLOW">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
@@ -14,57 +18,87 @@
 
 <body>
     <header>
-
-        <section>
-            <div class="contenedor_header">
-                <div class="logo">
-                    <img src="./img/logo.png" alt="logo" width="50%">
+        <div class="logo">
+            <img src="./img/logo 1.png" alt="logo" height="50px">
+        </div>
+        <div class="titulo">
+            <h1> Venta de sabanas y acolchados</h1>
+            <h2>Todo para tu cama o sommier</h2>
+        </div>
+        <nav>
+            <a href="./index.html" class="nav-">Inicio</a>
+            <a href="./productos.html" class="nav-">Productos</a>
+            <a href="./reseña.html" class="nav-">Reseña</a>
+            <a href="./contacto.html" class="nav-">Contacto</a>
+            <a href="" class="nav-">
+                <label for="btn-modal">
+                    <div class="carrito">
+                        <span><i class="fa-solid fa-cart-shopping"></i></span>
+                        <span id="contador">0</span>
+                    </div>
+                </label>
+            </a>
+        </nav>
+        <input type="checkbox" id="btn-modal">
+        <div class="contenedor_modal">
+            <div class="contenido_modal">
+                <h1>Tienda Online</h1>
+                <div id="carrito">
+                    <h2>Carrito de Compras</h2>
+                    <ul id="lista-carrito"></ul>
+                    <p>Total: $<span id="total-carrito">0</span></p>
+                    <ul id="lista-carrito"></ul>
                 </div>
-                <div class="titulo">
-                    <h1> Venta de sabanas y acolchados</h1>
-                    <h2>Todo para tu cama o sommier</h2>
-                </div>
+                <hr>
 
-                <div class="menu">
-                    <nav>
-                        <a href="./index.html">Inicio</a>
-                        <a href="./productos.html">Productos</a>
-                        <a href="./reseña.html">Reseña</a>
-                        <a href="./contacto.html">Contacto</a>
-                    </nav>
+
+                <button id="btnPagar">pagar</button>
+                <button id="vaciar-carrito">Vaciar Carrito</button>
+                <div class="btn-cerrar">
+                    <label for="btn-modal">cerrar</label>
                 </div>
             </div>
-        </section>
+        </div>
     </header>
-
     <main>
+
         <div class="contenedor_inicio">
+
             <div class="item1">
                 <p> "Dormirás como un bebé con nuestras sábanas de algodón 100% puro yTransforma tu habitación
                     en un oasis de tranquilidad" .</p>
                 <p>"Descubre la diferencia de dormir en sábanas de alta calidad."</p>
             </div>
-            <div class="item2">
-                <img src="./img/cama_blanca.JPG" width="100%" height="500" alt="imagen de sabana gris ">
 
+
+            <div class="item2">
+                <img src="./img/cama_blanca.JPG" alt="imagen de sabana gris ">
             </div>
+
         </div>
+
     </main>
     <footer>
+
         <div class="icono1">
             <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
         </div>
+
         <div class="icono2">
             <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
         </div>
+
         <div class="icono3">
             <a href="https://www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
+
         <div class="ulinea">
             <p>Desarrollado por :Felix Salvatierra - 2025 |<i class="fa-regular fa-envelope"></i> <a
                     href="mailto:salvadreams@gmail.com">Email :salvadreams@gmail.com</a></p>
+        </div>
+
     </footer>
-    </div>
+    <script src="./js/script.js"></script>
 
 </body>
 
